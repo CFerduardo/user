@@ -26,3 +26,7 @@ const createUser = ({
   db.push(newUser);
   return newUser;
 };
+
+const getAll = () => {
+  return db;
+};
