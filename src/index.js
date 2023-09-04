@@ -30,3 +30,8 @@ const createUser = ({
 const getAll = () => {
   return db;
 };
+
+const deleteUser = (id) => {
+  db = db.filter((user) => user.id !== id);
+  return db;
+};
