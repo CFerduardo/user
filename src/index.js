@@ -35,3 +35,10 @@ const deleteUser = (id) => {
   db = db.filter((user) => user.id !== id);
   return db;
 };
+
+const getById = (id) => {
+  const found = db.find((user) => user.id === id);
+  return found;
+};
+
+// function to find the user
