@@ -1,3 +1,5 @@
+const uuid = require("uuid");
+
 // const usuarios = {
 //     id:
 //     name:
@@ -60,3 +62,10 @@ const updateUser = (id, partialUser) => {
 
   return updateUser;
 };
+
+function main() {
+  createUser("12345", "susana", "oria");
+  console.log();
+}
+
+main();
