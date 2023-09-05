@@ -24,7 +24,7 @@ const createUser = ({
   updateAt,
 }) => {
   const newUser =
-    (id, name, lastname, dni, year, createdAt, deletedAt, updateAt);
+    (id ?? uuid.v4, name, lastname, dni, year, createdAt, deletedAt, updateAt);
   db.push(newUser);
   return newUser;
 };
