@@ -41,4 +41,22 @@ const getById = (id) => {
   return found;
 };
 
-// function to find the user
+const updateUser = (id, partialUser) => {
+  const user = getById(id);
+
+  if (!user) {
+    console.log("user not found");
+    return;
+  }
+
+  deleteUser(id);
+
+  const userUpdate = {
+    ...user,
+    ...partialUser,
+  };
+
+  db.push(userUpdate);
+
+  return updateUser;
+};
